@@ -14,3 +14,12 @@ app.use('/api/users',require('./routes/UserRoute'))
 app.use('/api/bookings',require('./routes/BookingRoute'))
 
 app.listen(PORT,() => console.log(`Server is connected on ${PORT}`))
+
+
+module.exports = (req, res) => {
+    if (req.url === '/') {
+      res.status(200).send('Hello, world!');
+    } else {
+      res.status(404).send('Not Found');
+    }
+  };
