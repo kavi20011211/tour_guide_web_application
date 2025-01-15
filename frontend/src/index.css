@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+p {
+  line-height: 1.7;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: 2.2;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.container {
+  width: 100%;
+  max-width: 100vw;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.welcome-info-container{
+  width: 100%;
+  max-width: 100vw;
+  margin: 20px;
+  padding: 0 10px;
+  text-align: center;
+}
+
+.welcome-info-container h1{
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+.welcome-info-container a{
+  color: rgb(8, 71, 152);
+  font-weight: 900;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+  border-bottom: 1px solid #e6e6e6;
+}
+
+.logo a{
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(8, 71, 152) ;
+}
+
+.header ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header ul li {
+  margin-left: 20px;
+}
+
+.header ul li a {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  color: rgb(8, 71, 152);
+}
+
+.header ul li a:hover {
+  font-weight: 900;
+}
+
+.header ul li a svg {
+  margin-right: 5px;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  padding: 0 20px;
+}
+
+.heading p {
+  color: #828282;
+}
+
+.form,
+.content {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 10px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e6e6e6;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-family: inherit;
+}
+
+.form-group label {
+  text-align: left;
+  display: block;
+  margin: 0 0 5px 3px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  background: #000;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  text-align: center;
+  appearance: button;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn svg {
+  margin-right: 8px;
+}
+
+.btn-reverse {
+  background: #fff;
+  color: #000;
+}
+
+.btn-block {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.btn:hover {
+  transform: scale(0.98);
+}
+
+.loadingSpinnerContainer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loadingSpinner {
+  width: 64px;
+  height: 64px;
+  border: 8px solid;
+  border-color: #000 transparent #555 transparent;
+  border-radius: 50%;
+  animation: spin 1.2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.box-container {
+  height: 100%;
+  display: flex;
+}
+
+.map-container {
+  flex: 1; /* Let the map container take all remaining space */
+  height: 100%; /* Ensure it fills its parent container */
+  position: relative; /* Ensures no overlapping of other elements */
+}
+
+.data-container {
+  width: 300px; /* Fixed width */
+  height: 100%; /* Match the viewport height */
+  overflow-y: auto;
+  text-align: center;
+}
+
+.data-container form {
+  display: flex;
+  flex-direction: column;  /* Form fields are arranged in a column layout */
+  flex-grow: 1;            /* Allows the form to take up available height in the parent container */
+  width: 100%;             /* Full width inside the sidebar */
+  overflow-y: auto;        /* Enable scrolling inside the form if content exceeds its height */
+  padding-bottom: 20px;    /* Some padding at the bottom for better UX */
+}
+
+.box-image {
+  position: relative; /* Make the container a positioning reference */
+  height: 400px;
+  width: 100%;
+  /* margin-top: -3.5%; */
+  border-radius: 25px;
+  background-image: url("./assets/beaches.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.text-container {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for accurate centering */
+  /* display: flex; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.text-container h1{
+  color: #fff;
+  font-size: 48px;
+}
+.text-container h4{
+  color: #fff;
+  font-size: 30px;
+}
+
+.login-box-container {
+  display: flex; /* Align items horizontally */
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  max-width: 100vw;
+  margin: 0;
+}
+
+.login-image-box-container {
+  flex: 1; /* Take up 50% of the width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #0056d2; /* Replace with your desired background color */
+  color: white; /* Text color for contrast */
+  background-image: url("./assets/background.jpg"); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login-form-box-container {
+  flex: 1; /* Take up 50% of the width */
+  display: flex;
+  flex-direction: column; /* Align children in a vertical layout */
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #fff; /* White background for contrast */
+  box-shadow: -1px 0 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for separation */
+}
+
+.login-form-box-container h1,
+.login-form-box-container p {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333; /* Text color for better readability */
+}
+
+.login-form-box-container form {
+  width: 100%;
+  max-width: 400px; /* Restrict form width */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form-box-container form input,
+.login-form-box-container form button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.login-form-box-container form button {
+  background-color: #0056d2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.login-form-box-container form button:hover {
+  background-color: #0041a8; /* Darker shade for hover effect */
+}
+
+
+.register-box-container {
+  display: flex; /* Align items horizontally */
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  max-width: 100vw;
+  margin: 0;
+}
+
+.register-image-box-container {
+  flex: 1; /* Take up 50% of the width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #0056d2; /* Replace with your desired background color */
+  color: white; /* Text color for contrast */
+  background-image: url("./assets/nightsky.jpg"); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.register-form-box-container {
+  flex: 1; /* Take up 50% of the width */
+  display: flex;
+  flex-direction: column; /* Align children in a vertical layout */
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #fff; /* White background for contrast */
+  box-shadow: -1px 0 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for separation */
+}
+
+.register-form-box-container h1,
+.register-form-box-container p {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333; /* Text color for better readability */
+}
+
+.register-form-box-container form {
+  width: 100%;
+  max-width: 400px; /* Restrict form width */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.register-form-box-container form input,
+.register-form-box-container form button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.register-form-box-container form button {
+  background-color: #0056d2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.register-form-box-container form button:hover {
+  background-color: #0041a8; /* Darker shade for hover effect */
+}
+
+/* Sizing of map container */
+.leaflet-container{
+  height: 100vh;
+  border: 2px solid black;
+}
+
+
+/* Data container form */
+.data-form-container{
+  margin: 10px;
+  margin-top: 25px;
+}
+.data-form-container h1,
+.data-form-container p {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333; /* Text color for better readability */
+}
+
+.data-form-container form {
+  width: 100%;
+  max-width: 400px; /* Restrict form width */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.data-form-container form input,
+.data-form-container form select,
+.data-form-container form button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.data-form-container form button {
+  background-color: #0056d2;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.data-form-container form button:hover {
+  background-color: #0041a8; /* Darker shade for hover effect */
+}
+
+
+.dashboard-box-container{
+  display: flex; /* Align items horizontally */
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  max-width: 100vw;
+  margin: 0;
+}
+
+.dashboard-image-box-container{
+  flex: 1; /* Take up 50% of the width */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #0056d2; /* Replace with your desired background color */
+  color: white; /* Text color for contrast */
+  background-image: url("./assets/welcome.jpg"); /* Replace with your background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.dashboard-form-box-container{
+  flex: 1; /* Take up 50% of the width */
+  display: flex;
+  flex-direction: column; /* Align children in a vertical layout */
+  align-items: center;
+  /* justify-content: center; */
+  padding: 40px;
+  background-color: #fff; /* White background for contrast */
+  box-shadow: -1px 0 5px rgba(0, 0, 0, 0.1); /* Add a subtle shadow for separation */
+  overflow-y: auto;        /* Enable scrolling for the sidebar */
+  overflow-x: hidden;
+}
+
+.dashboard-form-box-container h1{
+  color: #0041a8;
+  font-size: 24;
+
+}
+
+.dashboard-form-box-container h3{
+  font-size: 18;
+}
+
+.dashboard-form-box-container form {
+  width: 100%;
+  max-width: 400px; /* Restrict form width */
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.dashboard-form-box-container form input,
+.dashboard-form-box-container form button {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 16px;
+}
